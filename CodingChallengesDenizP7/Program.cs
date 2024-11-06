@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.Design;
+using System.Linq.Expressions;
 
 class Challenges
 {
@@ -58,22 +60,43 @@ class Challenges
             }
             else if (choices == 5)
             {
-                Console.WriteLine("slect a age to convert to days);
-                var = Console.ReadLine();
+                Console.WriteLine("slect a age to convert to days");
+                var number7 = Console.ReadLine();
                 int numberToUse7 = int.Parse(number7);
-                Console.WriteLine("I am going to take an age and convert it  " + CalcAge(numberToUse7) + " is your number plus 1");
+                Console.WriteLine("I am going to take an age and convert it to days" + CalcAge(numberToUse7) + "is your age in days");
             }
             else if (choices == 6)
             {
 
+                Console.WriteLine("please give me the base of the triangle");
+
+                var number7 = Console.ReadLine();
+                int numberToUse7 = int.Parse(number7);
+
+                Console.WriteLine("Got it, give me the triangles height");
+                var number8 = Console.ReadLine();
+                int numberToUse8 = int.Parse(number8);
+                Console.WriteLine("The Area of the triangle is: " + number7 + " times: " + number8 + " divided by 2 which equals: " + triArea(numberToUse7, numberToUse8));
+                CircuitPower(numberToUse8, numberToUse8);
             }
             else if (choices == 7)
             {
-
+                Console.WriteLine("slect a number and i will tell you if its less than or equal to 0");
+                var number10 = Console.ReadLine();
+                int numberToUse10 = int.Parse(number10);
+                Console.WriteLine("I am goint to tell you if your number is less than or equal to zero" + lessThanOrequalToZero(numberToUse10) );
             }
             else if (choices == 8)
             {
+                Console.WriteLine("please give me your first number and i will tell yopu if it is less than 100");
 
+                var number11 = Console.ReadLine();
+                int numberToUse11 = int.Parse(number11);
+
+                Console.WriteLine("Got it, give me the triangles height");
+                var number12 = Console.ReadLine();
+                int numberToUse12 = int.Parse(number12);
+                Console.WriteLine("The sum of: " + number11 + " plus: " + number12 + " is: " + lessThan100(numberToUse11, numberToUse12));
             }
             else if (choices == 9)
             {
@@ -115,10 +138,24 @@ class Challenges
     {
         return number7 * 365;
     }
+    public static int triArea(int number8, int number9)
+    {
+        return (number8 * number9) / 2;
+    }
+
+    public static bool lessThanOrequalToZero(int number10)
+    {
+        return number10 <= 0;
+    }
+
+    public static bool lessThan100(int number11, int number12)
+    {
+        return number11 + number11 < 100;
+    }
+
 
     public static bool IsEqual(int number13, int number14)
     {
-        return number13 == number14;1
+        return number13 == number14;
     }
-
 }      
