@@ -113,6 +113,24 @@ class Challenges
             {
 
             }
+            else if (choices == 11)
+            {
+
+            }
+            else if (choices == 12)
+            {
+                Console.WriteLine("give me a number of hours and i will convert it to seconds");
+                var number15 = Console.ReadLine();
+                int numberToUse15 = int.Parse(number15);
+                Console.WriteLine(number15 + "converted from seconds to hours is" + howManySeconds(numberToUse15));
+            }
+            else if (choices == 13)
+            {
+                Console.WriteLine("give me a number of sides for a polygon and i will tell you the sum of its internal angles");
+                var number16 = Console.ReadLine();
+                int numberToUse16 = int.Parse(number16);
+                Console.WriteLine(number16 + "sided polgons internal angles is" + SumPolygon(numberToUse16));
+            }
         }
         //Welcome the user to my program
     }
@@ -157,5 +175,20 @@ class Challenges
     public static bool IsEqual(int number13, int number14)
     {
         return number13 == number14;
+    }
+
+    public static string GiveMeSomething(string something)
+    {
+        return something + " ";
+    }
+
+    public static int howManySeconds(int number15)
+    {
+        return number15 * 3600;
+    }
+
+    public static int SumPolygon(int number16)
+    {
+        return (number16 - 2) * 180;
     }
 }      
