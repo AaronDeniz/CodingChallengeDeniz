@@ -8,7 +8,7 @@ class Challenges
 
     public static void Main(string[] args)
     {
-        Console.WriteLine("WElcoime to my challenges programs! \n please pick one of the programs 1 - 9");
+        Console.WriteLine("WElcoime to my challenges programs! \n please pick one of the programs 1 - 14");
         var choice = Console.ReadLine();
         int choices = int.Parse(choice);
         bool work = true;
@@ -111,11 +111,13 @@ class Challenges
             }
             else if (choices == 10)
             {
-
+                Console.WriteLine("type a word to add something to is");
+                string words = Console.ReadLine(); 
+                Console.WriteLine("your word plus something is" + GiveMeSomething(words));
             }
             else if (choices == 11)
             {
-
+               
             }
             else if (choices == 12)
             {
@@ -130,6 +132,16 @@ class Challenges
                 var number16 = Console.ReadLine();
                 int numberToUse16 = int.Parse(number16);
                 Console.WriteLine(number16 + "sided polgons internal angles is" + SumPolygon(numberToUse16));
+            }
+            else if (choices == 14)
+            {
+                Console.WriteLine("type a word and i will add Edabit");
+                string words2 = Console.ReadLine();
+                Console.WriteLine("your word plus Edabit is" + nameString(words2));
+            }
+            else if (choices == 15)
+            {
+
             }
         }
         //Welcome the user to my program
@@ -177,9 +189,14 @@ class Challenges
         return number13 == number14;
     }
 
-    public static string GiveMeSomething(string something)
+    public static string GiveMeSomething(string Words)
     {
-        return something + " ";
+        return "something" + Words; 
+    }
+
+    public static bool Reverse(string )
+    {
+
     }
 
     public static int howManySeconds(int number15)
@@ -191,4 +208,11 @@ class Challenges
     {
         return (number16 - 2) * 180;
     }
+
+    public static string nameString(string Words2)
+    {
+        return Words2 + "Edabit";
+    }
+
+   
 }      
