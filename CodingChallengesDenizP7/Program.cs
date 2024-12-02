@@ -8,7 +8,7 @@ class Challenges
 
     public static void Main(string[] args)
     {
-        Console.WriteLine("WElcoime to my challenges programs! \n please pick one of the programs 1 - 14");
+        Console.WriteLine("WElcoime to my challenges programs! \n please pick one of the programs 1 - 16");
         var choice = Console.ReadLine();
         int choices = int.Parse(choice);
         bool work = true;
@@ -143,6 +143,19 @@ class Challenges
             {
 
             }
+            else if (choices == 16)
+            {
+                Console.WriteLine("please give the amount of 2- pointers during the game");
+
+                var number17 = Console.ReadLine();
+                int numberToUse17 = int.Parse(number17);
+
+                Console.WriteLine("Got it, give me the amount of 3-pointers during the game");
+                var number18 = Console.ReadLine();
+                int numberToUse18 = int.Parse(number18);
+                Console.WriteLine("The amount of 2-pointers scored were: " + number17 + " and the amount of 3-pointers scored was: " + number18 + " so the final amount of points scored was: " + points(numberToUse17, numberToUse18));
+                CircuitPower(numberToUse18, numberToUse18);
+            }
         }
         //Welcome the user to my program
     }
@@ -194,10 +207,7 @@ class Challenges
         return "something" + Words; 
     }
 
-    public static bool Reverse(string )
-    {
-
-    }
+   
 
     public static int howManySeconds(int number15)
     {
@@ -212,6 +222,11 @@ class Challenges
     public static string nameString(string Words2)
     {
         return Words2 + "Edabit";
+    }
+
+    public static int points(int number17, int number18)
+    {
+        return (number17 * 2) +  number18 * 3;
     }
 
    
