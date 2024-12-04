@@ -8,7 +8,7 @@ class Challenges
 
     public static void Main(string[] args)
     {
-        Console.WriteLine("WElcoime to my challenges programs! \n please pick one of the programs 1 - 16");
+        Console.WriteLine("WElcoime to my challenges programs! \n please pick one of the programs 1 - 17");
         var choice = Console.ReadLine();
         int choices = int.Parse(choice);
         bool work = true;
@@ -156,6 +156,19 @@ class Challenges
                 Console.WriteLine("The amount of 2-pointers scored were: " + number17 + " and the amount of 3-pointers scored was: " + number18 + " so the final amount of points scored was: " + points(numberToUse17, numberToUse18));
                 CircuitPower(numberToUse18, numberToUse18);
             }
+            else if (choices == 17)
+            {
+                Console.WriteLine("please give the lenght of the rectangle");
+
+                var number19 = Console.ReadLine();
+                int numberToUse19 = int.Parse(number19);
+
+                Console.WriteLine("Got it, give me the width of the rectangle");
+                var number20 = Console.ReadLine();
+                int numberToUse20 = int.Parse(number20);
+                Console.WriteLine("The Length of your rectangle is: " + number19 + " and the width of your rectangle is: " + number20 + " so the perimeter of your rectangle is: " + FindPerimeter(numberToUse19, numberToUse20));
+                CircuitPower(numberToUse20, numberToUse20);
+            }
         }
         //Welcome the user to my program
     }
@@ -227,6 +240,10 @@ class Challenges
     public static int points(int number17, int number18)
     {
         return (number17 * 2) +  number18 * 3;
+    }
+    public static int FindPerimeter(int number19, int number20)
+    {
+        return (number19 + number20) * 2;
     }
 
    
